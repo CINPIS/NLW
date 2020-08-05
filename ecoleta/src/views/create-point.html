@@ -1,0 +1,116 @@
+{% extends "layout.html"%}
+
+{% set pageId = "page-create-point" %}
+
+{% block title %}
+    <title>Cria um ponto de coleta</title>
+{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="./style/create-point.css">
+    <link rel="stylesheet" href="./style/modal.css">
+{% endblock styles %}
+
+{% block content %}
+    {% include "partials/page-header.html" %}
+    <main>
+        <form action="/save-point" method="POST">
+            <h1>Criar um ponto de coleta</h1>
+            <fieldset>
+                <!-- agrupa diferente partes de dados, semântica organizado (melhor que div) -->
+                <legend>
+                    <h2>Dados da Entidade</h2>
+                </legend>
+
+                <div class="field-group">
+                    <div class="field">
+                        <label for="name">Nome da Entidade</label>
+                        <input type="text" name="name" required="required">
+                    </div>
+                    <div class="field">
+                        <label for="image">Imagem da Entidade</label>
+                        <input type="url" name="image" placeholder="http://" required="required">
+                    </div>
+                </div>
+                
+                <div class="field-group">
+                    <div class="field">
+                        <label for="address">Endereço</label>
+                        <input type="text" name="address" required="required">
+                    </div>
+                    <div class="field">
+                        <label for="address">Número/ Complemento</label>
+                        <input type="text" name="address2" required="required">
+                    </div>
+                </div>
+                
+                <div class="field-group">
+                    <div class="field">
+                        <label for="address">Estado</label>
+                        <select name="uf" required="required">
+                            <option value="">Selecione o Estado</option>
+                        </select>
+                        <input type="hidden" name="state">
+                    </div>
+                    <div class="field">
+                        <label for="city">Cidade</label>
+                        <select name="city" disabled="disabled" required="required">
+                            <!--JS habilita o campo ao clicar n oanterior-->
+                            <option value="city">Selecione a Cidade</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <h2>Itens de Coleta</h2>
+                </legend>
+                <div class="itens-grid">
+                    <li data-id="Lâmpadas">
+                        <!-- pode ser qualquer numero inclusive dentro do data, util no js. Essa semantica não é boa pro css-->
+                        <img src="./assets/icones/lampadas.svg" alt="Lampadas">
+                        <span>Lâmpadas</span>
+                    </li>
+                    <li data-id="Pilhas e Baterias">
+                        <!-- pode ser qualquer numero inclusive dentro do data, util no js. Essa semantica não é boa pro css-->
+                        <img src="./assets/icones/baterias.svg" alt="Pilhas e Baterias">
+                        <span>Pilhas e Baterias</span>
+                    </li>
+                    <li data-id="Papeis e Papelão">
+                        <!-- pode ser qualquer numero inclusive dentro do data, util no js. Essa semantica não é boa pro css-->
+                        <img src="./assets/icones/papeis-papelao.svg" alt="Papeis e Papelão">
+                        <span>Papeis e Papelão</span>
+                    </li>
+                    <li data-id="Resíduos Eletrônicos">
+                        <!-- pode ser qualquer numero inclusive dentro do data, util no js. Essa semantica não é boa pro css-->
+                        <img src="./assets/icones/eletronicos.svg" alt="Resíduos Eletrônicos">
+                        <span>Resíduos Eletrônicos</span>
+                    </li>
+                    <li data-id="Orgânicos">
+                        <!-- pode ser qualquer numero inclusive dentro do data, util no js. Essa semantica não é boa pro css-->
+                        <img src="./assets/icones/organicos.svg" alt="Resíduos Orgânicos">
+                        <span>Orgânicos</span>
+                    </li>
+                    <li data-id="Óleo de Cozinha">
+                        <!-- pode ser qualquer numero inclusive dentro do data, util no js. Essa semantica não é boa pro css-->
+                        <img src="./assets/icones/oleo.svg" alt="Óleo de Cozinha">
+                        <span>Óleo de Cozinha</span>
+                    </li>
+                </div>
+                <input type="hidden" name="items">
+            </fieldset>
+            <button type="submit">Cadastrar ponto de coleta</button>
+        </form>
+    </main>
+{% endblock content %}
+
+{% block modal %}
+    {% if saved %}
+        {% include "partials/point-created.html" %}
+    {% endif %}
+{% endblock modal %}
+
+
+{% block scripts %}
+    <script src="scripts/create-point.js"></script>
+{% endblock scripts %}

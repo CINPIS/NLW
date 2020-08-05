@@ -1,0 +1,28 @@
+:root{
+    --title-color: #322153;
+    --cor-primaria: #34cb79;
+/* replicados em formato de variáveis */
+} 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+/* para resolver usa-se essa propriedade. O padrão é content box, conteúdo, depois preenchimento etc. 
+Borderbox é a borda como padrão. Preenchimento sempre fica dentro dele mento e a borda será o maximo 
+de largura. Paddings não vão esticar */
+}
+html{
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background: #f0f0f5;
+    -webkit-font-smoothing: antialiased;
+}
+a{
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: Ubuntu, sans-serif;
+    color: var(--title-color);
+}
+

@@ -1,0 +1,81 @@
+#page-home{
+    height: 120vh; /* viewport heigth */
+    background: url('../assets/icones/home-background.svg') no-repeat;
+    background-position: 37vw bottom; /* viewport weight */
+}
+#page-home .content{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto; /* primeira a top e bottom */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#page-home header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* alinhamento base x  */
+    margin-top: 2em;
+}
+#page-home header a{
+    display: flex;
+    font-weight: 700;
+    color: var(--title-color);
+}
+#page-home header span{
+    background-image: url('../assets/icones/log-in.svg');
+    width: 20px;
+    height: 20px;
+    display: flex; /* perde a ideia de ser inline*/
+    margin-right: 10px;
+}
+#page-home main{
+    max-width: 560px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+#page-home main h1{
+    font-size: 54px;
+}
+#page-home main p {
+    font-size: 24px;
+    line-height: 38px;
+}
+#page-home main a{
+    width: 100%;
+    max-width: 360px;
+    background-color: var(--cor-primaria);
+    height: 72px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    transition: 400ms;
+    font-weight: bold;
+    color: white;
+}
+#page-home main a:hover{
+    background-color: #2fb86e;
+}
+#page-home main a span{
+    width: 72px;
+    height: 72px;
+    background-color: rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page-home main a span::after{
+    content: '';
+    background-image: url('../assets/icones/search.svg');
+    width: 20px;
+    height: 20px;
+} /* pseudo elemento */
+#page-home main a strong{
+    color: white;
+    flex: 1; /* um preenchimento de sobras, meio que automatico até o final da linha (inspecionar azul) */
+    text-align: center;
+}

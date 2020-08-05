@@ -1,0 +1,76 @@
+body{
+    background: white;
+}
+body::after{
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    height: 16rem;
+    background: #f0f0f0f5;
+}
+#page-search-results{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto; /* alinhamento pelo lado de fora da caixa (dentro é o display flex...)*/
+}
+#page-search-results header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 48px;
+}
+#page-create-point header a{
+    color: var(--title-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+#page-create-point header a span{
+    background-image: url('../assets/icones/arrow-left.svg');
+    width: 20px;
+    height: 20px;
+    display: flex;
+    margin-right: 10px;
+}
+main {
+    margin: 48px;
+}
+main h4{
+    font-weight: normal;
+    font-family: Roboto, sans-sarif;
+    margin-bottom: 32px;
+}
+main .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+main .card img{
+    width: 100%;
+    height: 150px;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover; /* prenche todo o espaço com a img*/
+}
+main .card h2{
+    color: #322153;
+    font-size: 20px;
+    line-height: 41px;
+    margin-top: 32px;
+}
+main .card h4{
+    font-family: Roboto, sans-sarif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 34px;
+    color: #34CB79;
+    margin: 15px 0;
+}
+main .card p{
+    font-size: 16px;
+    line-height: 26px;
+    color: #6c6c80;
+}
