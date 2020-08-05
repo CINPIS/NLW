@@ -46,7 +46,7 @@ module.exports = db
         console.log(this)
     }
 
-    db.run(query, values, afterInsertData)  //- JÁ foi criado.
+    db.run(query, values, afterInsertData)  
 
     db.all(`SELECT * FROM places`, function(error, rows){
         if(error){
