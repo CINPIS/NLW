@@ -1,3 +1,5 @@
 #NLW
 
-Projeto desenvolvido junto a RocketSeat.
+Projetos desenvolvido junto a RocketSeat.
+
+Ecoleta e Proffys.
