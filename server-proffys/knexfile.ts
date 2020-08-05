@@ -1,6 +1,6 @@
 import path from 'path';
 
-module.exports = { // sintaxe mais antigo pro knex entender
+module.exports = { 
 
     client: 'sqlite3',
     connection: {
@@ -11,7 +11,3 @@ module.exports = { // sintaxe mais antigo pro knex entender
     },
     useNullAsDefault: true,
 }; 
-
-// vamos sobrescrever o migrate mae e migrate latest
-// para executar as migrações disponiveis, vamos alterar um pouco o funcionamento.
-// primeiro cria a migration: na mao pra nao ser em js.
