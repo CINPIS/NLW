@@ -20,13 +20,6 @@
             encontrados</h4>
         <div class="cards">
 
-            <!--  {{ places }} acesso ao bd, mas não é objecto literal que queremos,
-            mas o objeto em si, então precisa de um card com estruturas dinâmicas,
-            para que recebam os objetos de forma estruturada e customizada.
-            o nome places é o mesmo do server.js.
-            o place é o rows, os valores. que quando roda o search,
-            ele devolve o objeto dinamico, array, que tem x objetos  -->
-
             {% for place in places %} 
                 <div class="card">
                     <img src="{{ place.image }}" alt="{{ place.name }}">
