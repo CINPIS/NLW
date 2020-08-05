@@ -1,27 +1,24 @@
 import Knex from 'knex';
 
-// TypeScript
-
 export async function up(knex: Knex){
 
     return knex.schema.createTable('connections', table => {
-        // conexão com o professor
         table.increments('id').primary();
 
-        table.integer('user_id') //relacionamento
+        table.integer('user_id') 
             .notNullable()
             .references('id')
             .inTable('users')
-            .onUpdate('CASCADE')  // atualiza tbm de forma cascade
-            .onDelete('CASCADE'); // deleta o professor e as aulas dele
+            .onUpdate('CASCADE')  
+            .onDelete('CASCADE');
             
         table.timestamp('created_at')
             .defaultTo(knex.raw('CURRENT_TIMESTAMP'))
-            .notNullable(); // marcar a hora e id do professor
+            .notNullable(); 
 
-    }); // o parametro recebido é a tabela criada
-
-} // alteracoes no bd
+    }); 
+    
+}
 
 export async function down(knex: Knex){
 
