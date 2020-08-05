@@ -1,7 +1,5 @@
 import Knex from 'knex';
 
-// TypeScript
-
 export async function up(knex: Knex){
 
     return knex.schema.createTable('class_schedule', table => {
@@ -13,17 +11,17 @@ export async function up(knex: Knex){
         table.integer('to').notNullable();
 
 
-        table.integer('class_id') //relacionamento
+        table.integer('class_id') 
             .notNullable()
             .references('id')
             .inTable('classes')
-            .onUpdate('CASCADE')  // atualiza tbm de forma cascade
-            .onDelete('CASCADE'); // deleta o professor e as aulas dele
+            .onUpdate('CASCADE')  
+            .onDelete('CASCADE'); 
             
 
-    }); // o parametro recebido é a tabela criada
+    });
 
-} // alteracoes no bd
+} 
 
 export async function down(knex: Knex){
 
