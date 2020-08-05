@@ -17,7 +17,6 @@
         <form action="/save-point" method="POST">
             <h1>Criar um ponto de coleta</h1>
             <fieldset>
-                <!-- agrupa diferente partes de dados, semântica organizado (melhor que div) -->
                 <legend>
                     <h2>Dados da Entidade</h2>
                 </legend>
@@ -55,7 +54,6 @@
                     <div class="field">
                         <label for="city">Cidade</label>
                         <select name="city" disabled="disabled" required="required">
-                            <!--JS habilita o campo ao clicar n oanterior-->
                             <option value="city">Selecione a Cidade</option>
                         </select>
                     </div>
@@ -67,32 +65,26 @@
                 </legend>
                 <div class="itens-grid">
                     <li data-id="Lâmpadas">
-                        <!-- pode ser qualquer numero inclusive dentro do data, util no js. Essa semantica não é boa pro css-->
                         <img src="./assets/icones/lampadas.svg" alt="Lampadas">
                         <span>Lâmpadas</span>
                     </li>
                     <li data-id="Pilhas e Baterias">
-                        <!-- pode ser qualquer numero inclusive dentro do data, util no js. Essa semantica não é boa pro css-->
                         <img src="./assets/icones/baterias.svg" alt="Pilhas e Baterias">
                         <span>Pilhas e Baterias</span>
                     </li>
                     <li data-id="Papeis e Papelão">
-                        <!-- pode ser qualquer numero inclusive dentro do data, util no js. Essa semantica não é boa pro css-->
                         <img src="./assets/icones/papeis-papelao.svg" alt="Papeis e Papelão">
                         <span>Papeis e Papelão</span>
                     </li>
                     <li data-id="Resíduos Eletrônicos">
-                        <!-- pode ser qualquer numero inclusive dentro do data, util no js. Essa semantica não é boa pro css-->
                         <img src="./assets/icones/eletronicos.svg" alt="Resíduos Eletrônicos">
                         <span>Resíduos Eletrônicos</span>
                     </li>
                     <li data-id="Orgânicos">
-                        <!-- pode ser qualquer numero inclusive dentro do data, util no js. Essa semantica não é boa pro css-->
                         <img src="./assets/icones/organicos.svg" alt="Resíduos Orgânicos">
                         <span>Orgânicos</span>
                     </li>
                     <li data-id="Óleo de Cozinha">
-                        <!-- pode ser qualquer numero inclusive dentro do data, util no js. Essa semantica não é boa pro css-->
                         <img src="./assets/icones/oleo.svg" alt="Óleo de Cozinha">
                         <span>Óleo de Cozinha</span>
                     </li>
