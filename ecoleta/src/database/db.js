@@ -4,7 +4,6 @@ const db = new sqlite.Database("./src/database/database.db")
 
 module.exports = db
 
-/*
     db.run(`
         CREATE TABLE IF NOT EXISTS places (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -57,11 +56,11 @@ module.exports = db
         console.log(rows)
     })
 
-  /* db.run(`DELETE FROM places WHERE id = ?`, [5], function(error){
+ db.run(`DELETE FROM places WHERE id = ?`, [5], function(error){
         if(error){
             return console.log(error)
         }
         console.log("registro deletado com sucesso.")
     })
-  */
-//}) 
+
+}) 
