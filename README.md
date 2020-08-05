@@ -1,6 +1,6 @@
 #NLW
 
-Projetos desenvolvido junto a RocketSeat.
+Projetos desenvolvidos junto a RocketSeat.
 Aplicações para a Web.
 
 Ecoleta e Proffys.
