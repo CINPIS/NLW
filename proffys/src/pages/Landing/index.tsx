@@ -17,7 +17,7 @@ function Landing(){
 
                 <div className="logo-container">
                     <img src={LogoImg} alt="Proffys"/>
-                    <h2>Online platform right next to you.</h2>
+                    <h2>Online study platform right next to you.</h2>
                 </div>
 
                 <img 
