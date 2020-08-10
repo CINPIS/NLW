@@ -1,34 +1,57 @@
 import React from 'react';
 
 import WhatsIcon from '../../assets/icons/whatsapp.svg';
+import api from '../../services/api';
 
 import './style.css';
 
-function TeacherItem(){
+export interface Teacher{
+
+    id: number,
+    bio: string,
+    avatar: string,
+    cost: number,
+    name: string,
+    subject: string,
+    whatsapp: string  
+}
+
+interface TeacherItemProps{
+    teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({teacher}) => {
+
+    function createNewConnection(){
+        api.post('connections', {
+            user_id: teacher.id
+        });
+    }
+
     return(
     <article className="teacher-item">
         <header>
-            <img src="https://avatars0.githubusercontent.com/u/49377882?s=460&u=1c65ae0cb8708e48c2bee95289a22dae4e1768e0&v=4" alt="CinPis"/>
+            <img src={teacher.avatar} alt={teacher.name}/>
             <div>
-                <strong>Cinthia Pissetti</strong>
-                <span>Portuguese</span>
+                <strong>{teacher.name}</strong>
+                <span>{teacher.subject}</span>
             </div>
         </header>
 
-        <p>
-            Portuguese language is a passion.
-            <br /> <br />
-            Portuguese is not a simple language, but it is very beautiful from its everyday pronunciation to its placement. 
-        </p>
+        <p>{teacher.bio}</p>
 
         <footer>
             <p>Price/hour
-                <strong>$ 60,00</strong>
+                <strong>$ {teacher.cost}</strong>
             </p>
-            <button type="button">
+            <a 
+                target="_blank"
+                onClick={createNewConnection} 
+                href={`https://wa.me/${teacher.whatsapp}`}>
+                    
                 <img src={WhatsIcon} alt="WhatsApp"/>
                 Get in Touch
-            </button>
+            </a>
         </footer>
     </article>
     );
