@@ -193,7 +193,7 @@ function TeacherForm(){
                         <p>
                             <img src={WarningIcon} alt="Important"/>
                             Important! <br />
-                            Fill the fields above
+                            Fill all the fields above
                         </p>
                         <button 
                             type="submit">
