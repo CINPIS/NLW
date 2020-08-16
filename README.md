@@ -5,7 +5,9 @@ Aplicações para a Web.
 
 JavaScript e React.js (Proffys) + TypeScript.
 
-Ecoleta e Proffys (https://nlw-proffys.vercel.app/).
+Ecoleta e Proffys.
+
+Abaixo algumas ilustrações do Proffys (Landing Page, Teacher Form and Study Section).
 
 # ScreenShot
 
