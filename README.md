@@ -1,6 +1,6 @@
 # NLW Rocketseat
 
-Projetos desenvolvidos junto com aos Next Level Weeks da RocketSeat.
+Projetos desenvolvidos junto com aos Next Level Weeks da Rocketseat.
 
 Aplicações para a Web.
 Ecoleta (NLW#1),
