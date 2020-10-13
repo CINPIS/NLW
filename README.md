@@ -1,15 +1,21 @@
-#NLW
+# NLW Rocketseat
 
-Projetos desenvolvidos junto com a RocketSeat.
+Projetos desenvolvidos junto com aos Next Level Weeks da RocketSeat.
+
 Aplicações para a Web.
+Ecoleta (NLW#1),
+Proffys (NLW#2) e 
+Happy (NLW#3 - em desenvolvimento).
 
-JavaScript e React.js (Proffys) + TypeScript.
+## Tecnologias
 
-Ecoleta e Proffys.
+- JavaScript, HTML e CSS (Ecoleta).
+- JavaScript e React.js (Proffys e Happy) + TypeScript + JSX + CSS.
+
+
+### ScreenShot
 
 Abaixo algumas ilustrações do Proffys (Landing Page, Teacher Form and Study Section).
-
-# ScreenShot
 
 ![Landing Page](https://github.com/CINPIS/NLW/blob/master/landing.png "Optional title")
 
