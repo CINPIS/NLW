@@ -9,7 +9,11 @@ Projeto desenvolvido em arquitetura RESTful.
 
 ## Tecnologias
 
+Front-end
 - React
 - TypeScript
 - HTML /JSX
 - Standard CSS
+
+Back-end
+- Node.js
