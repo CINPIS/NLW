@@ -17,3 +17,4 @@ Front-end
 
 Back-end
 - Node.js
+- TypeORM + SQLite
